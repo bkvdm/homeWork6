@@ -10,7 +10,6 @@ public class Main {
         task8();
         task9();
         task10();
-
      }
 
     public static void task1 () {
@@ -74,14 +73,10 @@ public class Main {
         System.out.println("Задача 9");
         float salary = 29000f;
         float totalCash = 0f;
+        float percent = 12;
         for (int i = 1; i <= 12; i++) {
-            if (i == 1) {
+                totalCash = totalCash + totalCash * percent / 100 / 12;
                 totalCash = totalCash + salary;
- // В первый месяц заработная плата получена, но ещё не положена в банк, поэтому проценты за 1 месяц, с 29 000 рублей, будут начислены только во 2 месяце
-            } else if (i >= 2) {
-                salary = (float) (salary + salary * 0.01);
-                totalCash = totalCash + salary;
-            }
             System.out.println("Месяц " + i + ", сумма накоплений " + totalCash + " рублей");
         }
     }
@@ -97,4 +92,3 @@ public class Main {
         }
     }
 }
-
